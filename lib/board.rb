@@ -8,7 +8,7 @@ class Board
                     [".", ".", ".", ".", ".", ".", "."],
                     [".", ".", ".", ".", ".", ".", "."],
                     [".", ".", ".", ".", ".", ".", "."]]
-    @game_over = false
+    @game_over    = false
   end
 
   def print_board
