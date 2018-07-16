@@ -36,5 +36,14 @@ class TurnTest < Minitest::Test
 
     assert_equal expected, result
   end
-  
+
+  def test_we_can_generate_a_computer_move
+    # Rewrite this test
+    turn = Turn.new
+    expected = [0, 1, 2, 3, 4, 5, 6]
+    result = turn.generate_computer_move
+
+    assert expected.include?(result)
+  end
+
 end

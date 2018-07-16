@@ -43,4 +43,18 @@ class BoardTest < Minitest::Test
     assert_equal expected, result
   end
 
+  def test_we_can_place_a_piece
+    board = Board.new
+    expected = [[".", ".", ".", ".", ".", ".", "."],
+                [".", ".", ".", ".", ".", ".", "."],
+                [".", ".", ".", ".", ".", ".", "."],
+                [".", ".", ".", ".", ".", ".", "."],
+                [".", ".", ".", ".", "o", ".", "."],
+                [".", ".", ".", ".", "x", ".", "."]]
+    board.place_piece(4, board.player_piece)
+    board.place_piece(4, board.computer_piece)
+
+    assert_equal expected, board.board
+  end
+  
 end

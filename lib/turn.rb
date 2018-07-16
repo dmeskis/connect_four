@@ -4,7 +4,9 @@ class Turn
     @valid_user_inputs = ['A','B','C','D','E','F','G']
   end
 
-
+  def input_valid?(input)
+    @valid_user_inputs.include?(input)
+  end
 
   def get_user_input
     print "> "
@@ -17,12 +19,13 @@ class Turn
     end
   end
 
-  def input_valid?(input)
-    @valid_user_inputs.include?(input)
-  end
-
   def user_input_to_index(input)
     @valid_user_inputs.find_index(input)
   end
+
+  def generate_computer_move
+    rand(0..6)
+  end
+
 
 end
