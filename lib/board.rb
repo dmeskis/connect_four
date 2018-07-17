@@ -2,16 +2,16 @@ class Board
   attr_reader :game_over, :column_key, :player_piece, :computer_piece
   attr_accessor :board
   def initialize
-    @column_key   = ["A", "B", "C", "D", "E", "F", "G"]
-    @board        = [[".", ".", ".", ".", ".", ".", "."],
-                    [".", ".", ".", ".", ".", ".", "."],
-                    [".", ".", ".", ".", ".", ".", "."],
-                    [".", ".", ".", ".", ".", ".", "."],
-                    [".", ".", ".", ".", ".", ".", "."],
-                    [".", ".", ".", ".", ".", ".", "."]]
-    @player_piece = "x"
+    @column_key     = ["A", "B", "C", "D", "E", "F", "G"]
+    @board          = [[".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."]]
+    @player_piece   = "x"
     @computer_piece = "o"
-    @game_over    = false
+    @game_over      = false
   end
 
   def print_board
