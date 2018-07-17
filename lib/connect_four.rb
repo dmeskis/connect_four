@@ -1,24 +1,18 @@
 require './lib/board'
 require './lib/turn'
+require './lib/main'
 
 b = Board.new
-t = Turn.new(b)
+t = Turn.new
+m = Main.new(b, t)
 
 puts "Welcome to Connect Four"
 # Maybe make a main class that contains all this game logic,
 # will make replaying the game easier.
-while b.game_over == false
+while m.game_over != false
   b.print_board
-  t.player_turn
-  if b.board_full?
-    puts "It's a draw!"
-    break
-  else
-  end
-  t.computer_turn
-  if b.board_full?
-    puts "It's a draw!"
-    break
-  else
-  end
+  m.player_turn
+  m.game_over?
+  m.computer_turn
+  m.game_over?
 end
