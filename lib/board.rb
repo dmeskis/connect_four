@@ -31,4 +31,10 @@ class Board
     @board
   end
 
+  def board_full?
+    @board[0].all? do |piece|
+      piece != '.'
+    end
+  end
+
 end

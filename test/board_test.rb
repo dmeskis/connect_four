@@ -56,5 +56,11 @@ class BoardTest < Minitest::Test
 
     assert_equal expected, board.board
   end
-  
+
+  def test_if_board_is_full
+    board = Board.new
+    require 'pry' ; binding.pry
+    refute board.board_full?
+  end
+
 end
