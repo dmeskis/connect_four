@@ -31,10 +31,12 @@ class Board
     @board
   end
 
+  def valid_move?(placement)
+    @board[0][placement] == '.'
+  end
+
   def board_full?
-    @board[0].all? do |piece|
-      piece != '.'
-    end
+    @board[0].all? {|piece| piece != '.'}
   end
 
 end

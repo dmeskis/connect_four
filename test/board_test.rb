@@ -58,9 +58,15 @@ class BoardTest < Minitest::Test
   end
 
   def test_if_board_is_full
+    # Rewrite this test to have another assertion
     board = Board.new
-    require 'pry' ; binding.pry
     refute board.board_full?
+  end
+
+  def test_we_can_check_if_valid_move
+    # Rewrite this test to have another assertion
+    board = Board.new
+    assert board.valid_move?(5)
   end
 
 end
