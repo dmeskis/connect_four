@@ -72,8 +72,43 @@ class BoardTest < Minitest::Test
   def test_we_can_check_for_horizontal_win
     board = Board.new
 
-    assert horizontal_win
+    refute board.horizontal_win(board.board)
+
+    board.board =     [[".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", "x", "x", "x", "x", ".", "."]]
+    assert board.horizontal_win(board.board)
   end
+
+  def test_we_can_check_for_vertical_win
+    board = Board.new
+
+    refute board.vertical_win(board.board)
+
+    board.board =     [[".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", "x", ".", ".", ".", ".", "."],
+                      [".", "x", ".", ".", ".", ".", "."],
+                      [".", "x", ".", ".", ".", ".", "."],
+                      [".", "x", ".", ".", ".", ".", "."]]
+    assert board.vertical_win(board.board)
+  end
+
+  def test_we_can_check_for_diagonal_win
+    board = Board.new
+
+    refute board.diagonal_win(board.board)
+
+    board.board =     [[".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", ".", ".", "."],
+                      [".", ".", ".", ".", "x", ".", "."],
+                      [".", ".", ".", "x", ".", ".", "."],
+                      [".", ".", "x", ".", ".", ".", "."],
+                      [".", "x", ".", ".", ".", ".", "."]]
+    assert board.diagonal_win(board.board)
 
   end
 

@@ -12,7 +12,7 @@ while m.game_over != true
   m.player_turn
   b.print_board
   m.game_over?
+  m.simulate_ai
   m.computer_turn
-  b.print_board
   m.game_over?
 end

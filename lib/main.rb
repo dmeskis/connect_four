@@ -58,4 +58,10 @@ class Main
     end
   end
 
+  def simulate_ai
+    puts "Computer is thinking..."
+    sleep(0.5)
+  end
+
+
 end
