@@ -1,26 +1,20 @@
 require './lib/board'
 require './lib/turn'
+require './lib/main'
 
-t = Turn.new
 b = Board.new
+t = Turn.new
+m = Main.new(b, t)
 
 puts "Welcome to Connect Four"
-
-while b.game_over == false
+# Maybe make a main class that contains all this game logic,
+# will make replaying the game easier.
+while m.game_over != false
   b.print_board
-  if b.board_full?
-    puts "It's a draw!"
-    break
-  else
-  end
-  user_input = t.get_user_input
-  user_move = t.user_input_to_index(user_input)
-  b.place_piece(user_move, b.player_piece)
-  computer_move = t.generate_computer_move
-  b.place_piece(computer_move, b.computer_piece)
-  if b.board_full?
-    puts "It's a draw!"
-    break
-  else
-  end
+  m.player_turn
+  m.game_over?
+  # Add a pause, where it prints out thinking... to simulate
+  # actual AI XD
+  m.computer_turn
+  m.game_over?
 end

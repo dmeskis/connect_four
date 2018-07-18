@@ -69,4 +69,12 @@ class BoardTest < Minitest::Test
     assert board.valid_move?(5)
   end
 
+  def test_we_can_check_for_horizontal_win
+    board = Board.new
+
+    assert horizontal_win
+  end
+
+  end
+
 end

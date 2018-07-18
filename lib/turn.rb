@@ -1,3 +1,5 @@
+# require './lib/board.rb'
+
 class Turn
 
   def initialize
@@ -21,10 +23,6 @@ class Turn
 
   def user_input_to_index(input)
     @valid_user_inputs.find_index(input)
-  end
-
-  def generate_computer_move
-    rand(0..6)
   end
 
 
