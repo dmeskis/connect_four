@@ -13,6 +13,8 @@ while m.game_over != false
   b.print_board
   m.player_turn
   m.game_over?
+  # Add a pause, where it prints out thinking... to simulate
+  # actual AI XD
   m.computer_turn
   m.game_over?
 end

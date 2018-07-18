@@ -39,7 +39,6 @@ class Board
     @board[0].all? {|piece| piece != '.'}
   end
 
-  # Have a feeling this will be needed in iteration 3
   def reset_board
     @board = [[".", ".", ".", ".", ".", ".", "."],
               [".", ".", ".", ".", ".", ".", "."],
