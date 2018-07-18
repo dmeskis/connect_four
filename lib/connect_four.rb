@@ -7,7 +7,7 @@ t = Turn.new
 m = Main.new(b, t)
 
 puts "Welcome to Connect Four"
-while m.game_over != false
+while m.game_over != true
   b.print_board
   m.player_turn
   b.print_board

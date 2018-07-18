@@ -91,5 +91,29 @@ module WinConditions
     end
 
 
+      # def horizontal_win?
+      #   @board.each do |line|
+      #     0.upto(3) do |x|
+      #         # require 'pry' ; binding.pry
+      #         if (line[x..x+3].uniq.length == 1) && (line[x..x+3].all? {|piece| piece != '.'})
+      #           true
+      #         else
+      #           false
+      #         end
+      #       end
+      #     end
+      # end
+    ############# TESTING METHOD #############
+      # def horizontal_win?
+      #   @board.any? do |line|
+      #     0.upto(3) do |x|
+      #         (line[x..x+3].uniq.length == 1 && line[x..x+3].any? {|el| el != '.'}) == true
+      #       end
+      #     end
+      # end
+    ################ TESTING METHOD #############
+
+
+
 
 end

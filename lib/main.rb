@@ -7,7 +7,7 @@ class Main
   def initialize(board, turn)
     @board = board
     @turn = turn
-    @game_over == false
+    @game_over == true
   end
 
   def computer_turn
