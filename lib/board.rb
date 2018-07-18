@@ -1,4 +1,7 @@
+require './lib/win_conditions'
+
 class Board
+  include WinConditions
   attr_reader :game_over, :column_key, :player_piece, :computer_piece
   attr_accessor :board
   def initialize

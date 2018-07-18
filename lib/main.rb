@@ -30,7 +30,13 @@ class Main
   end
 
   def game_over?
-    if @board.board_full?
+    if @board.horizontal_win(@board.board)
+      puts "Winner!"
+      play_again?
+    elsif @board.vertical_win(@board.board)
+      puts "Winner!"
+      play_again?
+    elsif @board.board_full?
       play_again?
     end
   end
