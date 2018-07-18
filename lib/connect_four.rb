@@ -12,9 +12,11 @@ puts "Welcome to Connect Four"
 while m.game_over != false
   b.print_board
   m.player_turn
+  b.print_board
   m.game_over?
   # Add a pause, where it prints out thinking... to simulate
   # actual AI XD
   m.computer_turn
+  b.print_board
   m.game_over?
 end
