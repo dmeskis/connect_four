@@ -36,6 +36,9 @@ class Main
     elsif @board.vertical_win(@board.board)
       puts "Winner!"
       play_again?
+    elsif @board.diagonal_win(@board.board)
+      puts "Winner!"
+      play_again?
     elsif @board.board_full?
       play_again?
     end
